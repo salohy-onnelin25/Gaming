@@ -1,0 +1,161 @@
+footer {
+    min-height: 100vh;
+    @media (max-width: 1380px){
+        min-height: 0;
+    }
+    .footer-top {
+        min-height: 70vh;
+        width: 80%;
+        margin: 0 auto;
+        @media (max-width: 1380px){
+            display: none;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: clamp(1rem, 1.3vw, 1.6rem);
+        }
+        .footer-info {
+            min-height: 50vh;
+            padding: 20px 0;
+            .info-top {
+                display: grid;
+                grid-template-columns: 20% 20% 30% 30%;
+                .info-img {
+                    height: 300px;
+                    width: 200px;
+                    background-image: url(../Imgs/logo-gc-footer.jpg);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .info-pratique {
+                    font-weight: bold;
+                    ul {
+                        li {
+                            margin: 10px 0;
+                            a {
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+                .info-parent {
+                    font-weight: bold;
+                    .parent-btn {
+                        margin: 20px 0;
+                        a {
+                            color: $blue;
+                        }
+                    }
+                }
+                .info-contact {
+                    font-weight: bold;
+                    .suivre {
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+        .presse {
+            min-height: 20vh;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            border-top: 1px solid $gray;
+            align-items: center;
+            .presse-left {
+                font-weight: bold;
+            }
+            .presse-right {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
+                div {
+                    height: 50px;
+                    width: 100px;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .presse-img1 {
+                    background-image: url(../Imgs/figaro.png);
+                }
+                .presse-img2 {
+                    background-image: url(../Imgs/challenges.png);
+                }
+                .presse-img3 {
+                    background-image: url(../Imgs/lemonde.png);
+                }
+                .presse-img4 {
+                    background-image: url(../Imgs/leparisien.png);
+                }
+                .presse-img5 {
+                    background-image: url(../Imgs/progres.png);
+                }
+                .presse-img6 {
+                    background-image: url(../Imgs/echos.png);
+                }
+                .presse-img7 {
+                    background-image: url(../Imgs/bfm.png);
+                }
+                .presse-img8 {
+                    background-image: url(../Imgs/lepoint.png);
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        min-height: 30vh;
+        background: $black;
+        color: $white;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        align-items: center;
+        .footer-img {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-top: 40px;
+            gap: 20px;
+            div {
+                height: 50px;
+                width: 100px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .partenaire-img1 {
+                background-image: url(../Imgs/apollo.png);
+            }
+            .partenaire-img2 {
+                background-image: url(../Imgs/chiliz.png);
+            }
+            .partenaire-img3 {
+                background-image: url(../Imgs/omen.png);
+            }
+            .partenaire-img4 {
+                background-image: url(../Imgs/joa.png);
+            }
+            .partenaire-img5 {
+                background-image: url(../Imgs/zol.png);
+            }
+            .partenaire-img6 {
+                background-image: url(../Imgs/maxonomic.png);
+            }
+            .partenaire-img7 {
+                background-image: url(../Imgs/credit-mutuel.png);
+            }
+            .partenaire-img8 {
+                background-image: url(../Imgs/ubisoft.png);
+            }
+            .partenaire-img9 {
+                background-image: url(../Imgs/talent-web.png);
+            }
+            .partenaire-img10 {
+                background-image: url(../Imgs/vitality.png);
+            }
+        }
+    }
+}

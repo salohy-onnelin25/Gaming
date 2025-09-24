@@ -1,0 +1,157 @@
+main {
+    min-height: 100vh;
+    .main-top {
+        min-height: 50vh;
+        background: $black;
+        color: $white;
+        padding: 20px;
+        a {
+            color: $white;
+        }
+        .savoir-plus {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            @media (max-width: 1190px) {
+                display: flex;
+                flex-direction: column;
+            }
+            .gbs {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: space-between;
+                .gbs-img {
+                    height: 200px;
+                    width: 300px;
+                    background-image: url(../Imgs/logo-gbs-home.png);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+            .ga {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: space-between;
+                .ga-img {
+                    height: 200px;
+                    width: 300px;
+                    background-image: url(../Imgs/logo-ga-home.png);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+            .g {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: space-between;
+                .g-img {
+                    height: 200px;
+                    width: 300px;
+                    background-image: url(../Imgs/logo-gg-home.png);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+    .main-bottom {
+        min-height: 50vh;
+        background: $gray;
+        .new {
+            width: 80%;
+            margin: 0 auto;
+            .new-top {
+                min-height: 10vh;
+                align-items: center;
+                display: grid;
+                grid-template-columns: 70% 30%;
+                @media (max-width: 790px) {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                }
+                .new-btn {
+                    @media (max-width: 790px){
+                            margin: 20px;
+                        }
+                    a {
+                        border: 1px solid $black;
+                        padding: 10px;
+                        font-weight: bold;
+                        
+                    }
+                }
+            }
+            .new-bottom {
+                display: flex;
+                min-height: 40vh;
+                gap: 20px;
+                @media (max-width: 790px) {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 20px;
+                }
+                .new-bottom-sur {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .reunion-btn {
+                        margin-bottom: 10px;
+                        a {
+                            color: $blue;
+                        }
+                    }
+                    .reunion-img {
+                        height: 150px;
+                        width: 150px;
+                        background-image: url(../Imgs/ri8decembre.jpg);
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        @media (max-width: 790px) {
+                            height: 150px;
+                            width: 150px;
+                            margin: 0 auto;
+                        }
+                    }
+                    .paris-img {
+                        height: 150px;
+                        width: 150px;
+                        background-image: url(../Imgs/pgw18home.jpg);
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        @media (max-width: 790px) {
+                            height: 150px;
+                            width: 150px;
+                            margin: 0 auto;
+                        }
+                    }
+                    .reunion-lyon {
+                        height: 150px;
+                        width: 150px;
+                        background-image: url(../Imgs/inauguration_gaming_campus_photo.jpg);
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        @media (max-width: 790px) {
+                            height: 150px;
+                            width: 150px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

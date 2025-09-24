@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$white: white;
+$black: black;
+$gray: rgb(184, 179, 179);
+$blue: rgb(57, 57, 129);
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $black;
+    font-size: clamp(0.9rem, 1vw, 1.5rem);
+}
+
+p {
+    font-size: clamp(0.9rem, 1vw, 1.5rem);
+}
+h2 {
+    font-size: clamp(1rem, 1.3vw, 1.6rem);
+    margin: 10px 0;
+}
+.g-btn {
+    cursor: pointer;
+    margin-top: 20px;
+    border: 1px solid $white;
+    padding: 5px;
+    transition: all 0.3s ease;
+    &:hover {
+        background: $white;
+        a {
+            color: $black;
+        }
+    }
+    a {
+        font-weight: bold;
+    }
+}

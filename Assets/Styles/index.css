@@ -1,1 +1,589 @@
-/*# sourceMappingURL=index.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: clamp(0.9rem, 1vw, 1.5rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 1vw, 1.5rem);
+}
+
+h2 {
+  font-size: clamp(1rem, 1.3vw, 1.6rem);
+  margin: 10px 0;
+}
+
+.g-btn {
+  cursor: pointer;
+  margin-top: 20px;
+  border: 1px solid white;
+  padding: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.g-btn:hover {
+  background: white;
+}
+.g-btn:hover a {
+  color: black;
+}
+.g-btn a {
+  font-weight: bold;
+}
+
+header {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 2000px;
+}
+header .header-top {
+  min-height: 10vh;
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 1325px) {
+  header .header-top {
+    display: none;
+  }
+}
+header .header-top nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+header .header-top nav ul li {
+  position: relative;
+}
+header .header-top nav ul li a {
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+header .header-top nav ul li a:hover {
+  color: rgb(57, 57, 129);
+}
+header .header-top nav ul li#langue {
+  border: 1px solid rgb(184, 179, 179);
+  border-radius: 5px;
+  padding: 0 2px;
+  background: rgb(184, 179, 179);
+}
+header .header-top nav ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(57, 57, 129);
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+header .header-top nav ul li:hover::before {
+  width: 100%;
+}
+header .header-center {
+  min-height: 70vh;
+  width: 100%;
+  max-width: 2000px;
+  background-image: url(../Imgs/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 20px 0;
+}
+header .header-center .header-img {
+  height: 250px;
+  width: 700px;
+  background-image: url(../Imgs/logo-gc-hero.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 825px) {
+  header .header-center .header-img {
+    height: 150px;
+    width: 500px;
+  }
+}
+header .header-center .header-titre {
+  color: white;
+}
+header .header-center .header-titre h1 {
+  margin: 30px 0;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+@media (max-width: 825px) {
+  header .header-center .header-titre h1 {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+  }
+}
+header .header-center .header-titre a {
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+header .header-center .header-titre a:hover {
+  background-color: white;
+  color: black;
+}
+header .header-bottom {
+  min-height: 20vh;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+header .header-bottom p {
+  text-align: center;
+}
+
+main {
+  min-height: 100vh;
+}
+main .main-top {
+  min-height: 50vh;
+  background: black;
+  color: white;
+  padding: 20px;
+}
+main .main-top a {
+  color: white;
+}
+main .main-top .savoir-plus {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1190px) {
+  main .main-top .savoir-plus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+main .main-top .savoir-plus .gbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .main-top .savoir-plus .gbs .gbs-img {
+  height: 200px;
+  width: 300px;
+  background-image: url(../Imgs/logo-gbs-home.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main .main-top .savoir-plus .ga {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .main-top .savoir-plus .ga .ga-img {
+  height: 200px;
+  width: 300px;
+  background-image: url(../Imgs/logo-ga-home.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main .main-top .savoir-plus .g {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .main-top .savoir-plus .g .g-img {
+  height: 200px;
+  width: 300px;
+  background-image: url(../Imgs/logo-gg-home.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main .main-bottom {
+  min-height: 50vh;
+  background: rgb(184, 179, 179);
+}
+main .main-bottom .new {
+  width: 80%;
+  margin: 0 auto;
+}
+main .main-bottom .new .new-top {
+  min-height: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+@media (max-width: 790px) {
+  main .main-bottom .new .new-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 790px) {
+  main .main-bottom .new .new-top .new-btn {
+    margin: 20px;
+  }
+}
+main .main-bottom .new .new-top .new-btn a {
+  border: 1px solid black;
+  padding: 10px;
+  font-weight: bold;
+}
+main .main-bottom .new .new-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 40vh;
+  gap: 20px;
+}
+@media (max-width: 790px) {
+  main .main-bottom .new .new-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 20px;
+  }
+}
+main .main-bottom .new .new-bottom .new-bottom-sur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .main-bottom .new .new-bottom .new-bottom-sur .reunion-btn {
+  margin-bottom: 10px;
+}
+main .main-bottom .new .new-bottom .new-bottom-sur .reunion-btn a {
+  color: rgb(57, 57, 129);
+}
+main .main-bottom .new .new-bottom .new-bottom-sur .reunion-img {
+  height: 150px;
+  width: 150px;
+  background-image: url(../Imgs/ri8decembre.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 790px) {
+  main .main-bottom .new .new-bottom .new-bottom-sur .reunion-img {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+main .main-bottom .new .new-bottom .new-bottom-sur .paris-img {
+  height: 150px;
+  width: 150px;
+  background-image: url(../Imgs/pgw18home.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 790px) {
+  main .main-bottom .new .new-bottom .new-bottom-sur .paris-img {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+main .main-bottom .new .new-bottom .new-bottom-sur .reunion-lyon {
+  height: 150px;
+  width: 150px;
+  background-image: url(../Imgs/inauguration_gaming_campus_photo.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 790px) {
+  main .main-bottom .new .new-bottom .new-bottom-sur .reunion-lyon {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  min-height: 100vh;
+}
+@media (max-width: 1380px) {
+  footer {
+    min-height: 0;
+  }
+}
+footer .footer-top {
+  min-height: 70vh;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 1380px) {
+  footer .footer-top {
+    display: none;
+  }
+}
+footer .footer-top h2 {
+  font-weight: bold;
+  font-size: clamp(1rem, 1.3vw, 1.6rem);
+}
+footer .footer-top .footer-info {
+  min-height: 50vh;
+  padding: 20px 0;
+}
+footer .footer-top .footer-info .info-top {
+  display: grid;
+  grid-template-columns: 20% 20% 30% 30%;
+}
+footer .footer-top .footer-info .info-top .info-img {
+  height: 300px;
+  width: 200px;
+  background-image: url(../Imgs/logo-gc-footer.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+footer .footer-top .footer-info .info-top .info-pratique {
+  font-weight: bold;
+}
+footer .footer-top .footer-info .info-top .info-pratique ul li {
+  margin: 10px 0;
+}
+footer .footer-top .footer-info .info-top .info-pratique ul li a {
+  color: rgb(57, 57, 129);
+}
+footer .footer-top .footer-info .info-top .info-parent {
+  font-weight: bold;
+}
+footer .footer-top .footer-info .info-top .info-parent .parent-btn {
+  margin: 20px 0;
+}
+footer .footer-top .footer-info .info-top .info-parent .parent-btn a {
+  color: rgb(57, 57, 129);
+}
+footer .footer-top .footer-info .info-top .info-contact {
+  font-weight: bold;
+}
+footer .footer-top .footer-info .info-top .info-contact .suivre {
+  margin: 20px 0;
+}
+footer .footer-top .presse {
+  min-height: 20vh;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border-top: 1px solid rgb(184, 179, 179);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer-top .presse .presse-left {
+  font-weight: bold;
+}
+footer .footer-top .presse .presse-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+footer .footer-top .presse .presse-right div {
+  height: 50px;
+  width: 100px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+footer .footer-top .presse .presse-right .presse-img1 {
+  background-image: url(../Imgs/figaro.png);
+}
+footer .footer-top .presse .presse-right .presse-img2 {
+  background-image: url(../Imgs/challenges.png);
+}
+footer .footer-top .presse .presse-right .presse-img3 {
+  background-image: url(../Imgs/lemonde.png);
+}
+footer .footer-top .presse .presse-right .presse-img4 {
+  background-image: url(../Imgs/leparisien.png);
+}
+footer .footer-top .presse .presse-right .presse-img5 {
+  background-image: url(../Imgs/progres.png);
+}
+footer .footer-top .presse .presse-right .presse-img6 {
+  background-image: url(../Imgs/echos.png);
+}
+footer .footer-top .presse .presse-right .presse-img7 {
+  background-image: url(../Imgs/bfm.png);
+}
+footer .footer-top .presse .presse-right .presse-img8 {
+  background-image: url(../Imgs/lepoint.png);
+}
+footer .footer-bottom {
+  min-height: 30vh;
+  background: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer-bottom .footer-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 40px;
+  gap: 20px;
+}
+footer .footer-bottom .footer-img div {
+  height: 50px;
+  width: 100px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+footer .footer-bottom .footer-img .partenaire-img1 {
+  background-image: url(../Imgs/apollo.png);
+}
+footer .footer-bottom .footer-img .partenaire-img2 {
+  background-image: url(../Imgs/chiliz.png);
+}
+footer .footer-bottom .footer-img .partenaire-img3 {
+  background-image: url(../Imgs/omen.png);
+}
+footer .footer-bottom .footer-img .partenaire-img4 {
+  background-image: url(../Imgs/joa.png);
+}
+footer .footer-bottom .footer-img .partenaire-img5 {
+  background-image: url(../Imgs/zol.png);
+}
+footer .footer-bottom .footer-img .partenaire-img6 {
+  background-image: url(../Imgs/maxonomic.png);
+}
+footer .footer-bottom .footer-img .partenaire-img7 {
+  background-image: url(../Imgs/credit-mutuel.png);
+}
+footer .footer-bottom .footer-img .partenaire-img8 {
+  background-image: url(../Imgs/ubisoft.png);
+}
+footer .footer-bottom .footer-img .partenaire-img9 {
+  background-image: url(../Imgs/talent-web.png);
+}
+footer .footer-bottom .footer-img .partenaire-img10 {
+  background-image: url(../Imgs/vitality.png);
+}/*# sourceMappingURL=index.css.map */

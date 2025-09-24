@@ -1,0 +1,111 @@
+header {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 2000px;
+    .header-top {
+        min-height: 10vh;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 1325px) {
+            display: none;
+        }
+        nav {
+            ul {
+                display: flex;
+                gap: 40px;
+                li {
+                    position: relative;
+                    a {
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease;
+                    }
+                    a:hover {
+                        color: $blue;
+                    }
+                    &#langue {
+                        border: 1px solid $gray;
+                        border-radius: 5px;
+                        padding: 0 2px;
+                        background: $gray;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: -5px;
+                        width: 0;
+                        height: 2px;
+                        background-color: $blue;
+                        transition: width 0.3s ease;
+                    }
+                    &:hover::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .header-center {
+        min-height: 70vh;
+        width: 100%;
+        max-width: 2000px;
+        background-image: url(../Imgs/bg.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        .header-img {
+            height: 250px;
+            width: 700px;
+            background-image: url(../Imgs/logo-gc-hero.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            @media (max-width: 825px) {
+                height: 150px;
+                width: 500px;
+            }
+        }
+        .header-titre {
+            h1 {
+                margin: 30px 0;
+                font-size: clamp(2rem, 2.5vw, 3rem);
+                @media (max-width: 825px) {
+                    font-size: clamp(1.5rem, 2vw, 2.5rem);
+                }
+            }
+            color: $white;
+            a {
+                color: $white;
+                border: 1px solid $white;
+                border-radius: 5px;
+                padding: 10px;
+                transition: all 0.3s ease;
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+    .header-bottom {
+        min-height: 20vh;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        p {
+            text-align: center;
+        }
+    }
+}
