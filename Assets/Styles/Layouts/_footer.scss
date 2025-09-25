@@ -1,13 +1,14 @@
 footer {
     min-height: 100vh;
-    @media (max-width: 1380px){
-        min-height: 0;
+    width: 100%;
+    @media (max-width: 1380px) {
+        min-height: 30px;
     }
     .footer-top {
         min-height: 70vh;
         width: 80%;
         margin: 0 auto;
-        @media (max-width: 1380px){
+        @media (max-width: 1380px) {
             display: none;
         }
         h2 {
@@ -35,6 +36,10 @@ footer {
                             margin: 10px 0;
                             a {
                                 color: $blue;
+                                transition: all 0.3s ease;
+                                &:hover {
+                                    color: $black;
+                                }
                             }
                         }
                     }
@@ -45,6 +50,10 @@ footer {
                         margin: 20px 0;
                         a {
                             color: $blue;
+                            transition: all 0.3s ease;
+                            &:hover {
+                                color: $black;
+                            }
                         }
                     }
                 }
@@ -112,6 +121,9 @@ footer {
         width: 100%;
         padding: 20px;
         align-items: center;
+        @media (max-width: 1380px) {
+            min-height: 30px;
+        }
         .footer-img {
             display: flex;
             justify-content: space-between;

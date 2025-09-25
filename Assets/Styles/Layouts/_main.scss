@@ -1,7 +1,14 @@
 main {
     min-height: 100vh;
+    width: 100%;
+    @media (max-width: 1190px) {
+        min-height: 100px;
+    }
     .main-top {
         min-height: 50vh;
+        @media (max-width: 1190px) {
+            min-height: 50px;
+        }
         background: $black;
         color: $white;
         padding: 20px;
@@ -67,6 +74,9 @@ main {
     .main-bottom {
         min-height: 50vh;
         background: $gray;
+        @media (max-width: 1190px) {
+            min-height: 50px;
+        }
         .new {
             width: 80%;
             margin: 0 auto;
@@ -75,20 +85,26 @@ main {
                 align-items: center;
                 display: grid;
                 grid-template-columns: 70% 30%;
+                @media (max-width: 1190px) {
+                    min-height: 10px;
+                }
                 @media (max-width: 790px) {
                     display: flex;
                     flex-direction: column;
                     text-align: center;
                 }
                 .new-btn {
-                    @media (max-width: 790px){
-                            margin: 20px;
-                        }
+                    @media (max-width: 790px) {
+                        margin: 20px;
+                    }
                     a {
                         border: 1px solid $black;
                         padding: 10px;
                         font-weight: bold;
-                        
+                        transition: all 0.3s ease;
+                        &:hover {
+                            background: $white;
+                        }
                     }
                 }
             }
@@ -96,6 +112,9 @@ main {
                 display: flex;
                 min-height: 40vh;
                 gap: 20px;
+                @media (max-width: 1190px) {
+                    min-height: 40px;
+                }
                 @media (max-width: 790px) {
                     display: flex;
                     flex-direction: column;
@@ -109,6 +128,10 @@ main {
                         margin-bottom: 10px;
                         a {
                             color: $blue;
+                            transition: all 0.3s ease;
+                            &:hover {
+                                color: $black;
+                            }
                         }
                     }
                     .reunion-img {

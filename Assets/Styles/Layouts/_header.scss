@@ -1,7 +1,6 @@
 header {
     min-height: 100vh;
     width: 100%;
-    max-width: 2000px;
     .header-top {
         min-height: 10vh;
         width: 80%;
@@ -49,10 +48,10 @@ header {
             }
         }
     }
+
     .header-center {
         min-height: 70vh;
         width: 100%;
-        max-width: 2000px;
         background-image: url(../Imgs/bg.jpg);
         background-position: center;
         background-size: cover;
@@ -64,8 +63,23 @@ header {
         flex-direction: column;
         text-align: center;
         padding: 20px 0;
+
         @media (max-width: 1325px) {
             min-height: 80vh;
+        }
+        @keyframes descente {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            60% {
+                transform: translateY(10px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         .header-img {
             height: 250px;
@@ -74,20 +88,26 @@ header {
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
+            display: inline-block;
+            animation: descente 1s ease-out forwards;
             @media (max-width: 825px) {
                 height: 150px;
-                width: 500px;
+                width: 150px;
             }
         }
+        
         .header-titre {
+            display: inline-block;
+            animation: descente 1s ease-out forwards;
             h1 {
                 margin: 30px 0;
                 font-size: clamp(2rem, 2.5vw, 3rem);
                 @media (max-width: 825px) {
-                    font-size: clamp(1.5rem, 2vw, 2.5rem);
+                    font-size: clamp(1rem, 1.5vw, 2rem);
                 }
             }
             color: $white;
+
             a {
                 color: $white;
                 border: 1px solid $white;
@@ -104,10 +124,14 @@ header {
     .header-bottom {
         min-height: 20vh;
         width: 80%;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         @media (max-width: 1325px) {
             min-height: 30vh;
+            @media (max-width: 580px) {
+                margin: 20px auto;
+            }
         }
         p {
             text-align: center;

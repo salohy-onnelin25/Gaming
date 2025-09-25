@@ -45,7 +45,6 @@ h2 {
 header {
   min-height: 100vh;
   width: 100%;
-  max-width: 2000px;
 }
 header .header-top {
   min-height: 10vh;
@@ -107,7 +106,6 @@ header .header-top nav ul li:hover::before {
 header .header-center {
   min-height: 70vh;
   width: 100%;
-  max-width: 2000px;
   background-image: url(../Imgs/bg.jpg);
   background-position: center;
   background-size: cover;
@@ -129,6 +127,45 @@ header .header-center {
   text-align: center;
   padding: 20px 0;
 }
+@media (max-width: 1325px) {
+  header .header-center {
+    min-height: 80vh;
+  }
+}
+@-webkit-keyframes descente {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes descente {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 header .header-center .header-img {
   height: 250px;
   width: 700px;
@@ -136,14 +173,20 @@ header .header-center .header-img {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  display: inline-block;
+  -webkit-animation: descente 1s ease-out forwards;
+          animation: descente 1s ease-out forwards;
 }
 @media (max-width: 825px) {
   header .header-center .header-img {
     height: 150px;
-    width: 500px;
+    width: 150px;
   }
 }
 header .header-center .header-titre {
+  display: inline-block;
+  -webkit-animation: descente 1s ease-out forwards;
+          animation: descente 1s ease-out forwards;
   color: white;
 }
 header .header-center .header-titre h1 {
@@ -152,7 +195,7 @@ header .header-center .header-titre h1 {
 }
 @media (max-width: 825px) {
   header .header-center .header-titre h1 {
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-size: clamp(1rem, 1.5vw, 2rem);
   }
 }
 header .header-center .header-titre a {
@@ -170,13 +213,23 @@ header .header-center .header-titre a:hover {
 header .header-bottom {
   min-height: 20vh;
   width: 80%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
+}
+@media (max-width: 1325px) {
+  header .header-bottom {
+    min-height: 30vh;
+  }
+}
+@media (max-width: 1325px) and (max-width: 580px) {
+  header .header-bottom {
+    margin: 20px auto;
+  }
 }
 header .header-bottom p {
   text-align: center;
@@ -184,12 +237,23 @@ header .header-bottom p {
 
 main {
   min-height: 100vh;
+  width: 100%;
+}
+@media (max-width: 1190px) {
+  main {
+    min-height: 100px;
+  }
 }
 main .main-top {
   min-height: 50vh;
   background: black;
   color: white;
   padding: 20px;
+}
+@media (max-width: 1190px) {
+  main .main-top {
+    min-height: 50px;
+  }
 }
 main .main-top a {
   color: white;
@@ -289,6 +353,11 @@ main .main-bottom {
   min-height: 50vh;
   background: rgb(184, 179, 179);
 }
+@media (max-width: 1190px) {
+  main .main-bottom {
+    min-height: 50px;
+  }
+}
 main .main-bottom .new {
   width: 80%;
   margin: 0 auto;
@@ -300,6 +369,11 @@ main .main-bottom .new .new-top {
           align-items: center;
   display: grid;
   grid-template-columns: 70% 30%;
+}
+@media (max-width: 1190px) {
+  main .main-bottom .new .new-top {
+    min-height: 10px;
+  }
 }
 @media (max-width: 790px) {
   main .main-bottom .new .new-top {
@@ -322,6 +396,11 @@ main .main-bottom .new .new-top .new-btn a {
   border: 1px solid black;
   padding: 10px;
   font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+main .main-bottom .new .new-top .new-btn a:hover {
+  background: white;
 }
 main .main-bottom .new .new-bottom {
   display: -webkit-box;
@@ -329,6 +408,11 @@ main .main-bottom .new .new-bottom {
   display: flex;
   min-height: 40vh;
   gap: 20px;
+}
+@media (max-width: 1190px) {
+  main .main-bottom .new .new-bottom {
+    min-height: 40px;
+  }
 }
 @media (max-width: 790px) {
   main .main-bottom .new .new-bottom {
@@ -359,6 +443,11 @@ main .main-bottom .new .new-bottom .new-bottom-sur .reunion-btn {
 }
 main .main-bottom .new .new-bottom .new-bottom-sur .reunion-btn a {
   color: rgb(57, 57, 129);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+main .main-bottom .new .new-bottom .new-bottom-sur .reunion-btn a:hover {
+  color: black;
 }
 main .main-bottom .new .new-bottom .new-bottom-sur .reunion-img {
   height: 150px;
@@ -408,10 +497,11 @@ main .main-bottom .new .new-bottom .new-bottom-sur .reunion-lyon {
 
 footer {
   min-height: 100vh;
+  width: 100%;
 }
 @media (max-width: 1380px) {
   footer {
-    min-height: 0;
+    min-height: 30px;
   }
 }
 footer .footer-top {
@@ -452,6 +542,11 @@ footer .footer-top .footer-info .info-top .info-pratique ul li {
 }
 footer .footer-top .footer-info .info-top .info-pratique ul li a {
   color: rgb(57, 57, 129);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+footer .footer-top .footer-info .info-top .info-pratique ul li a:hover {
+  color: black;
 }
 footer .footer-top .footer-info .info-top .info-parent {
   font-weight: bold;
@@ -461,6 +556,11 @@ footer .footer-top .footer-info .info-top .info-parent .parent-btn {
 }
 footer .footer-top .footer-info .info-top .info-parent .parent-btn a {
   color: rgb(57, 57, 129);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+footer .footer-top .footer-info .info-top .info-parent .parent-btn a:hover {
+  color: black;
 }
 footer .footer-top .footer-info .info-top .info-contact {
   font-weight: bold;
@@ -533,6 +633,11 @@ footer .footer-bottom {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (max-width: 1380px) {
+  footer .footer-bottom {
+    min-height: 30px;
+  }
 }
 footer .footer-bottom .footer-img {
   display: -webkit-box;
