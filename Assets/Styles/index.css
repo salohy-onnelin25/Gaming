@@ -66,6 +66,30 @@ header .header-top {
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background: white;
+  -webkit-transition: background 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+header .header-top.scrolled {
+  background: black;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+header .header-top.scrolled nav ul li a {
+  color: white;
+}
+header .header-top.scrolled .hamburger-icon {
+  color: white;
+}
+header .header-top .header-logo-mobile {
+  display: none;
+  width: 150px;
+  height: 50px;
+  background-image: url(../Imgs/logo-gc-hero.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 header .header-top .menu-toggle {
   display: none;
@@ -75,12 +99,14 @@ header .header-top .hamburger-icon {
   right: 5%;
   display: none;
   cursor: pointer;
-  font-size: 1.5rem;
   position: absolute;
   right: 0;
   top: 50%;
+  color: black;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
   z-index: 1000;
 }
 @media (max-width: 1325px) {
@@ -92,15 +118,27 @@ header .header-top .hamburger-icon {
 @media (max-width: 1325px) and (max-width: 980px) {
   header .header-top {
     min-height: 80px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0 20px;
+  }
+  header .header-top .header-logo-mobile {
+    display: block;
   }
   header .header-top .hamburger-icon {
     display: block;
+    position: static;
+    top: 50%;
     right: 20px;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     z-index: 1000;
+    color: black;
+  }
+  header .header-top .nav-menu ul li a {
+    color: black;
   }
   header .header-top .nav-menu {
     position: fixed;
@@ -130,6 +168,16 @@ header .header-top .hamburger-icon {
   header .header-top .nav-menu ul li {
     margin: 10px 0;
   }
+  header .header-top .nav-menu ul li a {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  header .header-top .nav-menu ul li a:hover {
+    color: rgb(57, 57, 129);
+  }
   header .header-top .nav-menu ul li::before {
     display: none;
   }
@@ -147,6 +195,20 @@ header .header-top .hamburger-icon {
   header .header-top .nav-menu {
     display: block;
   }
+}
+header .header-top nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 header .header-top nav ul {
   display: -webkit-box;

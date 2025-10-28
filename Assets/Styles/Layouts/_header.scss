@@ -14,6 +14,30 @@ header {
         z-index: 1000;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         background: $white;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+        &.scrolled {
+            background: $black; // Fond noir au scroll
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Ombre plus marquée
+            
+            // Appliquer la couleur blanche aux liens au scroll
+            nav ul li a {
+                color: $white;
+            }
+            
+            // Appliquer la couleur blanche au hamburger au scroll
+            .hamburger-icon {
+                color: $white;
+            }
+        }
+        .header-logo-mobile {
+            display: none; // Caché par défaut (desktop)
+            width: 150px; // Définir une taille pour le logo
+            height: 50px;
+            background-image: url(../Imgs/logo-gc-hero.png); // Votre image souhaitée
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
         .menu-toggle {
             display: none;
         }
@@ -22,11 +46,12 @@ header {
             right: 5%;
             display: none;
             cursor: pointer;
-            font-size: 1.5rem;
             position: absolute;
             right: 0;
             top: 50%;
+            color: $black;
             transform: translateY(-50%);
+            transition: color 0.3s ease;
             z-index: 1000;
         }
         @media (max-width: 1325px) {
@@ -34,16 +59,26 @@ header {
             padding: 0 20px;
             @media (max-width: 980px) {
                 min-height: 80px; 
-                justify-content: space-between; 
+                justify-content: center; 
                 padding: 0 20px;
-               
+
+                .header-logo-mobile {
+                    display: block; 
+                }
                 .hamburger-icon {
                     display: block;
+                    position: static;
+                    top: 50%;
                     right: 20px;
+                    position: absolute;
+                    transform: translateY(-50%);
                     z-index: 1000;
+                    color: $black
                 }
-
-                
+                .nav-menu ul li a {
+                   // S'assurer que les liens du menu mobile sont lisibles sur le fond blanc du nav-menu
+                   color: $black; 
+                }
                 .nav-menu {
                     position: fixed;
                     top: 0;
@@ -64,6 +99,15 @@ header {
                     gap: 15px;
                     li {
                         margin: 10px 0;
+                        a {
+                        color: $black; // ⬅️ Liens en noir par défaut (sur fond blanc)
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease;
+                    }
+                    a:hover {
+                        color: $blue;
+                    }
                         &::before {
                             display: none; 
                         }
@@ -90,6 +134,12 @@ header {
             }
         }
         nav {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             ul {
                 display: flex;
                 gap: 20px;

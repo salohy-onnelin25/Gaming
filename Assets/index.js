@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menu-toggle");
   const hamburgerIcon = document.querySelector(".hamburger-icon i");
 
+  const headerTop = document.querySelector(".header-top");
+    const scrollThreshold = 50;
+
   if (menuToggle && hamburgerIcon) {
-    // Définir la fonction de bascule pour l'icône
     function toggleHamburgerIcon() {
       if (menuToggle.checked) {
         // Menu ouvert -> Afficher l'icône X
@@ -16,11 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburgerIcon.classList.add("fa-bars");
       }
     }
-
-    // Écouter le changement de l'état de la checkbox
     menuToggle.addEventListener("change", toggleHamburgerIcon);
 
-    // Exécuter une fois au chargement pour s'assurer que l'icône est correcte
     toggleHamburgerIcon();
   }
+  function handleScroll() {
+        if (window.scrollY > scrollThreshold) {
+            // Défilement > 50px : Appliquer le style "scrollé" (Fond noir, Barres blanches)
+            headerTop.classList.add("scrolled");
+        } else {
+            // Défilement < 50px : Revenir au style initial (Fond blanc, Barres noires)
+            headerTop.classList.remove("scrolled");
+        }
+    }
+    
+    // Attacher l'écouteur d'événement au défilement de la fenêtre
+    window.addEventListener("scroll", handleScroll);
+    
+    // Exécuter la fonction une fois au chargement pour gérer le cas où la page charge déjà scrollée
+    handleScroll();
 });
