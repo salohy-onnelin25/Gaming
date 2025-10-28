@@ -59,17 +59,89 @@ header .header-top {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+header .header-top .menu-toggle {
+  display: none;
+}
+header .header-top .hamburger-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
 }
 @media (max-width: 1325px) {
   header .header-top {
+    width: 95%;
+  }
+}
+@media (max-width: 1325px) and (max-width: 980px) {
+  header .header-top {
+    min-height: 80px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 90%;
+  }
+  header .header-top .hamburger-icon {
+    display: block;
+  }
+  header .header-top .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    -webkit-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+    z-index: 5;
+  }
+  header .header-top .nav-menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+  header .header-top .nav-menu ul li {
+    margin: 10px 0;
+  }
+  header .header-top .nav-menu ul li::before {
     display: none;
+  }
+  header .header-top .nav-menu ul li#langue {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  header .header-top #menu-toggle:checked ~ .nav-menu {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@media (max-width: 1325px) and (min-width: 975px) {
+  header .header-top .nav-menu {
+    display: block;
   }
 }
 header .header-top nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 header .header-top nav ul li {
   position: relative;
